@@ -1,7 +1,7 @@
 from __future__ import print_function
 from Model import *
 corpus="time_corpus"
-
+encoder_input, decoder_input, decoder_target = prepare_data(corpus, lexfiles, 'Config_v2')
 attrs=read_config_file('Config_v2_extended')
 stime=attrs['source_time']
 ttime=attrs['target_time']
@@ -9,7 +9,6 @@ stoken=attrs['source_tokens']
 ttoken=attrs['target_tokens']
 
 def train(mode):
-    encoder_input, decoder_input, decoder_target = prepare_data(corpus, lexfiles, 'Config_v2')
     encoder_input = np.asarray(encoder_input)
     decoder_target = np.asarray(decoder_target)
     nw=BadhanauNMT(stime,ttime,stoken,ttoken,32,mode)
