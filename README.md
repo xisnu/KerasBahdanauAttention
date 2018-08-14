@@ -14,4 +14,5 @@ Standard Python 2.7 installation with Keras 2, numpy, matplotlib
 4. Once converged use `test()` from `Run.py` with input time string and check the attention output.
 ## Attention Output
 The visualization will generate an image like this,
+
 ![Attention](https://github.com/xisnu/KerasBahdanauAttention/blob/master/attention.jpg)
