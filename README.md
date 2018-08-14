@@ -9,3 +9,9 @@ I have implemented a Bahdanau style Attention layer in Keras. I tried to keep th
 Standard Python 2.7 installation with Keras 2, numpy, matplotlib
 ## Usage
 1. First run `Datagenerator.py`. This will automatically create a file `time_corpus`. Each row of this file has two strings, the first one (X) is network input with three elements weekday(w)[0-7], time(t)[0-23] and month(m)[0-11]. The second one (Y) is the word corresponding to weekday, time and month, also number of days in that month is appended. So, length of X is 3 and length of Y is 4. Note that m, t and w can appear in any order. 
+2. Now run `read_reduced_corpus("time_corpus",'Config_v2')` which will read this corpus file and generate lexicon for source and target strings (`lexfiles`) and also one configuration file named `Config_v2`.
+3. We are ready to train our model with `time_corpus`. Run `train()` from `Run.py`. Wait for convergence.
+4. Once converged use `test()` from `Run.py` with input time string and check the attention output.
+## Attention Output
+The visualization will generate an image like this,
+![Attention](https://github.com/xisnu/KerasBahdanauAttention/blob/master/attention.jpg)
