@@ -5,3 +5,7 @@ I have implemented a Bahdanau style Attention layer in Keras. I tried to keep th
 * Support for different input and output length sequence
 * A simple data generator module to generate some training sequence
 * A module to visulaize the effect of attention weights for input and output sequence
+## Requirement
+Standard Python 2.7 installation with Keras 2, numpy, matplotlib
+## Usage
+1. First run `Datagenerator.py`. This will automatically create a file `time_corpus`. Each row of this file has two strings, the first one (X) is network input with three elements weekday(w)[0-7], time(t)[0-23] and month(m)[0-11]. The second one (Y) is the word corresponding to weekday, time and month, also number of days in that month is appended. So, length of X is 3 and length of Y is 4. Note that m, t and w can appear in any order. 
